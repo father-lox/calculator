@@ -27,6 +27,12 @@ function clearButtonLogic() {
     display.value = "";
 }
 
+function select() {
+    if (display.selectionEnd != display.selectionStart) {
+        evt.target.setRangeText("ну возможно это работает");
+    }
+}
+
 clear.addEventListener("click", clearButtonLogic);
 
 backspace.addEventListener("click", backspaceButtonLogic);
@@ -39,4 +45,7 @@ buttons.forEach((button) => {
     button.addEventListener("click", function(evt) {
         display.value += evt.target.getAttribute("data-operation");
     });
+    if (button.hasAttribute("function")) {
+        button.addEventListener("click", select);
+    }
 });

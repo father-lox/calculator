@@ -18,7 +18,7 @@ html,body{
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
-	/* line-height: 1; */
+
 	font-size: 14px;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -37,6 +37,7 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body {
+    background-color: #d3d3d3;
     padding: 0;
     margin: 0;
     display: flex;
@@ -44,24 +45,46 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Inter Light', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .display {
+    border-radius: 10px;
     display: grid;
-    grid-template-columns: 0.1fr 1fr 0.1fr;
-    height: 50px;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    height: 70px;
     margin-bottom: 15px;
+    background: #d3d3d3;
+    box-shadow:  3px 3px 5px #bcbcbc, -2px -2px 5px #e0e0e0;
 }
 
 .display input {
-    margin: 0 10px;
+    border: 8px solid transparent;
+    border-radius: 15px;
+    background-color: transparent;
+    box-shadow: inset 3px 3px 2px #bcbcbc, inset  -2px -2px 2px #e0e0e0;
+    padding: 0 10px;
+}
+
+.display button {
+    border: 8px solid transparent;
+    background-color: transparent;
+    height: 100%;
+}
+
+.display button:first-child {
+    border-radius: 15px 0px 0px 15px;
+}
+
+
+.display button:last-child {
+    border-radius: 0px 15px 15px 0px;
 }
 
 .control-panel {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 .application {
@@ -69,18 +92,15 @@ body {
     color: gray;
 }
 
-.button {
-    background-color: transparent;
-    border: none;
-    border-radius: 4px;
-    min-width: 40px;
-    min-height: 40px;
+.control-panel .button {
+    border-radius: 10px;
+    background: #d3d3d3;
+    box-shadow:  3px 3px 5px #bcbcbc, -2px -2px 5px #e0e0e0;
+    width: 40;
+    height: 40;
 }
 
-.button:hover {
-    border: 2px solid black;
-}
-
-.display input:hover, .display input:focus {
-    border-bottom: 2px solid black;
+.button:active  {
+    box-shadow: inset 3px 3px 2px #bcbcbc, inset  -2px -2px 2px #e0e0e0;
+    text-shadow: 3px 4px 3px #bcbcbc, -3px -3px 2px #E0E0E0;
 }
