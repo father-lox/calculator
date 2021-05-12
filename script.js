@@ -3,8 +3,44 @@ let clear = document.getElementById("clear");
 let backspace = document.getElementById("backspace");
 let equal = document.querySelector(".button[special]");
 let buttons = document.querySelectorAll(".control-panel .button:not(.button[special])");
+let history = document.querySelector(".history");
 let hasEqual = false;
-let history = [];
+
+function HistoryValueSetToDisplay(evt) {
+    display.value = evt.target.textContent;
+}
+
+function addToBuffer(evt) {
+    
+}
+
+function createExceptionItem(expression, result) {
+    let historyItem = document.createElement("div");
+    historyItem.classList.add("history-item");
+    historyItem.innerHTML = (`<span class="expression">${expression}</span>
+    <span class="result">${result}</span>`);
+
+    console.log(historyItem.children);
+    
+    for(let i = 0; i < historyItem.children.length; i++)
+    {
+        historyItem.children[i].addEventListener("click", HistoryValueSetToDisplay);
+    }
+    // .forEach(function(item) {
+    //     item.addEventListener("click", HistoryValueSetToDisplay);
+    // });
+    
+
+    // let expressionItem = document.createElement("span");
+    // expressionItem.classList.add("expression"), expressionItem.textContent = expression;
+    // let resultItem = document.createElement("span");
+    // resultItem.classList.add("result"), resultItem.textContent = result;
+    
+    // historyItem.appendChild(expressionItem);
+    // historyItem.appendChild(resultItem);
+    
+    return historyItem;
+}
 
 function backspaceButtonLogic() {
     // let string = display.value;
@@ -37,11 +73,11 @@ backspace.addEventListener("click", backspaceButtonLogic);
 
 equal.addEventListener("click", function() {
     try {
-        let t = {expression: null, result: null};
-        t.expression = display.value;
+        let expression = display.value;
         display.value = math.evaluate(display.value);
-        t.result = display.value;
-        history.push(t);
+        let result = display.value;
+        history.prepend(createExceptionItem(expression, result));
+
         hasEqual = true;
     }
     catch (exception) {

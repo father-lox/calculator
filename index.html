@@ -15,37 +15,46 @@
             <input type="text" readonly>
             <button class="button" id="backspace">←</button>
         </div>
-        <div class="control-panel">
-            <button class="button" data-operation="sin(" function>sin(x)</button>
-            <button class="button" data-operation="sqrt(" function>√</button>
-            <button class="button const" data-operation="pi">π</button>
-            <button class="button" data-operation="7">7</button>
-            <button class="button" data-operation="8">8</button>
-            <button class="button" data-operation="9">9</button>
-            <button class="button" data-operation="/">÷</button>
-            <button class="button" data-operation="cos(" function>cos(x)</button>
-            <button class="button" data-operation="^">x^x</button>
-            <button class="button const" data-operation="9.81">g</button>
-            <button class="button" data-operation="4">4</button>
-            <button class="button" data-operation="5">5</button>
-            <button class="button" data-operation="6">6</button>
-            <button class="button" data-operation="*">×</button>
-            <button class="button" data-operation="tan(" function>tan(x)</button>
-            <button class="button" data-operation="!">x!</button>
-            <button class="button const" data-operation="e">e</button>
-            <button class="button" data-operation="1">1</button>
-            <button class="button" data-operation="2">2</button>
-            <button class="button" data-operation="3">3</button>
-            <button class="button" data-operation="-">-</button>
-            <button class="button" data-operation="(">(</button>
-            <button class="button" data-operation="abs(" function>|x|</button>
-            <button class="button" data-operation=")">)</button>
-            <button class="button" data-operation="0">0</button>
-            <button class="button" data-operation=".">.</button>
-            <button class="button" data-operation="=" special>=</button>
-            <button class="button" data-operation="+">+</button>
+        <div class="panels">
+            <div class="control-panel">
+                <button class="button" data-operation="sin(" function>sin(x)</button>
+                <button class="button" data-operation="sqrt(" function>√</button>
+                <button class="button const" data-operation="pi">π</button>
+                <button class="button" data-operation="cos(" function>cos(x)</button>
+                <button class="button" data-operation="^">x^x</button>
+                <button class="button const" data-operation="9.81">g</button>
+                <button class="button" data-operation="tan(" function>tan(x)</button>
+                <button class="button" data-operation="!">x!</button>
+                <button class="button const" data-operation="e">e</button>
+                <button class="button" data-operation="(">(</button>
+                <button class="button" data-operation="abs(" function>|x|</button>
+                <button class="button" data-operation=")">)</button>
+            </div>
+            <div class="control-panel">
+                <button class="button" data-operation="7">7</button>
+                <button class="button" data-operation="8">8</button>
+                <button class="button" data-operation="9">9</button>
+                <button class="button" data-operation="/">÷</button>
+                <button class="button" data-operation="4">4</button>
+                <button class="button" data-operation="5">5</button>
+                <button class="button" data-operation="6">6</button>
+                <button class="button" data-operation="*">×</button>
+                <button class="button" data-operation="1">1</button>
+                <button class="button" data-operation="2">2</button>
+                <button class="button" data-operation="3">3</button>
+                <button class="button" data-operation="-">-</button>
+                <button class="button" data-operation="0">0</button>
+                <button class="button" data-operation=".">.</button>
+                <button class="button" data-operation="=" special>=</button>
+                <button class="button" data-operation="+">+</button>
+            </div>
+        </div>
+        
+        <div class="history">
+        
         </div>
     </main>
+    
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="math.js"></script>
 </body>
