@@ -2,7 +2,7 @@ let display = document.querySelector(".display input[type='text']");
 let clear = document.getElementById("clear");
 let backspace = document.getElementById("backspace");
 let equal = document.querySelector(".button[special]");
-let buttons = document.querySelectorAll(".control-panel .button:not(.button[special])");
+let buttons = document.querySelectorAll(".control-panel .button:not([special])");
 let history = document.querySelector(".history");
 let hasEqual = false;
 
